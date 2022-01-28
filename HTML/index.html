@@ -1,0 +1,258 @@
+
+<h1>HTML</h1>
+
+<h2 id="toppart">En üst Kısım</h2>
+
+<h2>Listeler</h2>
+<!--
+    Sıralı Listeler-> 1,2,3, ordered list -> ol
+Sıralı Olmayan Listeler->*,*,*, unordered list-> ul
+List item -> li
+-->
+<ol>
+    <li>Liste Öğesi *1*</li>
+    <li>Liste Öğesi *2*</li>
+    <li>Liste Öğesi *3*</li>
+</ol>
+
+<ul>
+<li>Liste Öğesi *1*</li>
+<li>Liste Öğesi *2*</li>
+<li>Liste Öğesi *3*</li>
+</ul>
+<!--Girintinin bir önemi yok. 
+    Shift+tab ile girinti yokedilebilir.
+Girinti ise bir klasörün içinde bir yapı olduğunu belirtmek için kullanılıyor olabilir gibi düşünülebilir.-->
+
+<ol>
+    <li>Liste Öğesi *1*</li>
+    <li>Liste Öğesi *2*</li>
+    <li>Diğer Özellikler:
+        <ul>
+        <li>Liste Öğesi</li>
+        <li>Liste Öğesi</li>
+        <li>Liste Öğesi</li>
+        </ul>
+    </li>
+</ol>
+<!--Liste içerisinde liste de olabilir.-->
+<!--Liste başındaki sıralandırmayı rakamdan başka roma rakamı veya alfabetik şeklinde de yapabiliriz. 
+Bunun için type özelliğini kullanmamız gerekir.-->
+<ol type="I">
+    <li>Javascript</li>
+    <li>C#</li>
+    <li>Php</li>
+  </ol>
+
+  <ol type="A">
+    <li>Javascript</li>
+    <li>C#</li>
+    <li>Php</li>
+  </ol>
+
+  <h2>Emmet / Zen Coding</h2>  
+  <!---
+    Emmet web geliştiricilerinin sıklıkla zamandan tasarruf etmek ve daha hızlı kod yazmak için kullandığı bir eklentidir. Emmet’in temel mantığı, yazılımcıya kodlama yaparken zaman kazandırmasıdır.
+  -->
+  <!-- 
+    Etiket isimlerini direk verebiliyoruz.
+    + kardeş öğe -> h1+h2 yada h1+p+p+h2+p yazınca alt alta geliyor başlık
+    > içinde öğe örnek; ul>il yada h1>p(mantıklı değil başlıpın içinde paragraf olmaz ama yazılabilir.)
+    ^ yukarı çık ve öğe oluştur. örnek, ul>li*3^p
+    * çarp -> örnek; p*3 yazınca üç tane paragraf çıkar
+    lorem -> çok uzun anlamsız yazı
+    lorem4 -> dört kelimelik anlamsız yazı üretir
+    . -> class => örnek, h3.deneme (sonra döneceğiz bu konuya)
+    # -> id => örnek, h3.deneme#idolussun>lorem1
+    Örnekler aşağıdadır. Pratik yap elin alışsın.
+  -->
+
+<!-- h1+p+p+h2+p+p+p+p -->
+<!-- h1+p+p+h2+p+p+p+p -> h1+p*2+h2+p*4 -->
+<!-- ul>li*5 -->
+<!-- ul>li*5^p*2+h3 -->
+<!-- ul>li*3^p*2+h3 -->
+
+<!-- ul>li*3>lorem1^p*2>lorem4+h3>lorem1 -- HATALI -->
+<!-- ul>li*3>lorem1^^p*2>lorem4^h3>lorem1 -- DOĞRU -->
+
+<h3 class="deneme">Lorem.</h3> <!-- h3.deneme>lorem1 -->
+<h3 id="idolussun">Lorem.</h3> <!-- h3#idolussun>lorem1 -->
+
+<!-- h3.deneme#idolussun>lorem1 -->
+
+<ul>
+  <li class="tepki"></li>       <!-- ul>li.tepki -->
+</ul>
+<ul>
+  <li class="text-red3"></li>   <!-- ul>.text-red3 -->
+</ul>
+
+<h2>Görsellerle Çalışmak</h2>
+
+<!-- görsellere ulaşabilmek için img tagini kullanmalıyız. -->
+<img src="" alt="">
+<!-- img diyip taba basınca 2 tane özellik geldi.
+    her etiketin kendi içerisinde özellikleri olabilir
+    bazıları zorunludur.
+    mesela img nin içerisinde src zorunlu, alt alternatif bilgi
+    yani eğer görsel olmazsa alternatif ne yazacağımızı söylüyor.
+    src ise source yani kaynak demek; görselin nerde olduğunu belirtiyor.
+-->
+<img width="200" height="200" src="https://picsum.photos/600/300" alt="lorem picsum rastgele fotoğraflar kullanır">
+<img src="images/1.jpg" alt="merdiven fotoğrafı">
+
+<!-- Title özelliği kullanıcıyı bilgilendirme amacı taşır. 
+    Cursor(mouse imleci) ile görselin üzerine gelince bu özelliğe verilen text mesajı görünür. 
+    Ek açıklama gerektirecek resimlerde kullanabiliriz. Bilgilendirme amacı taşır.
+-->
+
+<!-- Görsele istenen ölçüleri vermek için width ve height       özellikleri kullanılır.
+    Width yatay genişlik, Height ise dikey uzunluk için kullanılır.
+    Width ve Height özellikleri tanımlanmadığı zaman görsel sayfada gerçek ölçüleri ile görünür. Bu ölçülerden yalnızca birine değer verildiğinde görsel oranları korunarak belirlenen ölçüde görünür. Her iki özelliğe de değer verildiğinde resim oranları yeni verilen ölçülerde olduğu gibi görünür. Bu kullanım resim ölçüleri ile uyumlu olmadığı zaman resimde oransal bozukluklar oluşur.
+  -->
+
+<!--  border Kullanımı
+      Görseli belirtilen kalınlıkta çerçeve içine alır. Daha gelişmiş CSS Border özelliği bunun yerine kullanılabilir.
+-->
+
+<!--  align Kullanımı
+      Web sayfasında resmin gözükeceği pozisyonu belirlemede align özelliği kullanılır. Bu özelliğe verilebilecek değerler şunlardır: left, right. Görselin sağa veya sola yaslı çıkmasını sağlar.
+-->
+
+<!-- Görsele link vermek için imgtag'i a 
+    taginin içerisinde     kullanılır. 
+    Yönlendirilmek istenen yerin URL'i a taginin href özelliğine yazılır. 
+    Görsel ise a taginin açıklama kısmına eklenir.
+-->
+
+<!-- map ve area
+    Görselleriniz hyperlink atamanız durumunda görselin tüm alanı link alanı haline dönüşecektir. 
+    Görselin herhangi bir yerine tıklanılması durumunda görsel sizi tanımlanan bağlantıya gönderecektir. 
+    <img> etiketleri için kullanılan <map> ve <area> etiketleri ile resmin içindeki koordinatlarla belirlediğimiz bir alanı sadece link haline getirebiliriz. 
+    Eklediğimiz <area> etiketi kadar belirlenen alanı bir resim üzerinden birçok bağlantıya link verebiliriz.
+-->
+
+<!--onload Event'i Kullanımı
+    Bu olay görsel yüklenmesi tamamlandığında çalışacak fonksiyonu belirler.
+    Herhangi bir nedenle görsel yüklenemezse ya da belirtilen adreste resim yoksa fonksiyon çalışmaz.
+-->
+
+<!--onload Event'i Kullanımı
+    Bu olay görsel yüklenmesi tamamlandığında çalışacak fonksiyonu belirler.
+    Herhangi bir nedenle görsel yüklenemezse ya da belirtilen adreste resim yoksa fonksiyon çalışmaz.
+-->
+
+<!-- picture Elementi ile Kullanım
+    HTML5 ile gelen picture elementi web sayfamızda responsive image'ler kullanmamız konusunda büyük kolaylıklar sağlıyor. Bir tane img ve birden fazla source içerebilir.
+    picture tagi ekran boyutlarına göre birden çok source kulllanmamızı sağlar bu sayede ekran boyutu değiştikçe farklı image'leri kullanabilirsiniz.
+-->
+
+<h2>Linklerle Çalışmak</h2>
+<!--
+  -başka bir web sitesine git
+  -başka bi sayfaya git-aynı yapının içerisinde
+  -aynı sayfa içinde bir yere ? ID -> bilgisine git
+  -mail at
+  -telefon et
+  Bunları yapabilmek için a etiketini kullanıyoruz.
+  A ya basıp taba basacak olursak href diye bi özellik geliyor.
+  href özelliği ise aslında sayfanın gitmek istediğiniz yeri
+-->
+
+<a href="https://kodluyoruz.org">
+  Kodluyoruz Web sayfasına gidilecek
+</a>
+
+<br>
+<br>
+
+<!-- a etiketinde href özelliğine verilen herhangi 
+    bir websitesi  adresine kolayca gidilebilir.
+    Burada target özelliğini göreceğiz. Bu özellik, gitmek istediğimiz bağlantının geçerli pencerede mi yoksa yeni bir pencerede mi açılması için kullanılır. 
+    _self özelliği geçerli pencerede açılması içindir. 
+    Varsayılan olarak böyledir. 
+    _blank özelliği ise yeni bir pencerede açılması içindir. 
+    a etiketine tıklayınca mdn reference e tıklayınca burda o kodun özelliklerini görebiliriz. UNUTMA!
+-->
+
+
+<a href="https://kodluyoruz.org" target="_blank" >    
+  Kodluyoruz Web sayfası yeni pencerede açılacak
+</a> 
+
+<br>
+<br>
+
+<a href="iletisim.html">
+  İletişim sayfasına git
+</a>
+
+<!-- br etiketi bir alt satıra geç demek -->
+
+<!--
+    aynı sayfa içinde bir yere: zor anlaşılan bir konu. yani ıd bilgisine git demek gibi bir şey. açıklamak gerekirse,
+    tc kimlik nosu diyelim ve sadece bir yerde var gibi düşünelim.
+    <h2 id="toppart">En üst Kısım</h2> bu kod yazılır.
+    <a href="#toppart"> En Üst Kısma Git </a> yazılır.
+    # = id demektir.yani id yazdığın yere gitmek için # kullanılır.
+-->
+
+<br>
+<ul>
+    <li>
+      <a href="#toppart">
+        En Üst Kısma Git
+    </a>    
+    </li>
+      <a href="mailto:info@kodluyoruz.org">
+        Kodluyoruz'a Mail At
+      </a>
+    <li>
+      <a href="tel:05550000000">
+        Telefon Aç
+      </a>
+    </li>
+</ul>
+
+<!--
+  mesela bir görseli bir linkin içerisine alıp, görsele tıklayınca bir yere gitmesini isteyebiliriz.
+  <a href="https://picsum.photos/">
+  <img src="images/1.jpg" alt="Fotoğraf İçeriği">
+</a>  kodunu kullanırız...
+-->
+<div>
+
+    <a href="https://picsum.photos/">
+        <img src="images/1.jpg" alt="Fotoğraf İçeriği">
+      </a>
+      
+      <h2>Blok Elementler ve Inline Elementlerle Çalışmak</h2>
+      
+      <!--
+        Bulunduğu yerin tamamını kaplayan elementlere blok elementler denir.
+        Inline elementler de tamamını kaplamak yerine yazdığımız text kadar yeri kaplar.Aşağıda örnekten inceleyebiliriz.
+      -->
+      <p>Lorem ipsum, <strong>dolor sit amet</strong> consectetur adipisicing elit. Accusantium, quos!</p>
+
+</div>
+
+<hr>
+
+<!--
+    division yani div yapısı; bu yapıda blok oluşturmak için kullanılan bir yapı. önemli bi özelliği yok. tepkisel olarak bir değişiklik olmaz bazen de olur çünkü blok haline almış oluruz. div tam bir blok oluşturuyor ve bu bloğu biz ilerde kurallar yazmak için kullanıyoruz.
+    span elementi ise, hiçbir işe yaramamış sanal bir kutu diyebiliriz. bazen spanla birlikte değişik kurallar yapabiliyoruz, bu yüzden öğreniriz. bu iki yapıyı css stilleri oluştururken kullanırız.
+-->
+
+<p> span:
+    Lorem ipsum dolor, <strong>sit amet consectetur</strong> <span style="color:red">adipisicing elit.</span>, Delectus eaque!
+</p>
+
+<!-- hr etiketi çizgi çekmeyi sağlıyor. -->
+
+<p> Kalın ve İtalik: 
+    <strong>
+        <em>Lorem ipsum dolor sit amet</em>
+    </strong>
+     consectetur adipisicing elit. Ipsam, odit!
+</p>
