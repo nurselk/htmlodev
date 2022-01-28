@@ -107,10 +107,11 @@ Bunun için type özelliğini kullanmamız gerekir.-->
     Ek açıklama gerektirecek resimlerde kullanabiliriz. Bilgilendirme amacı taşır.
 -->
 
-<!-- Görsele istenen ölçüleri vermek için width ve height       özellikleri kullanılır.
+<!-- Görsele istenen ölçüleri vermek için width ve height    
+    özellikleri kullanılır.
     Width yatay genişlik, Height ise dikey uzunluk için kullanılır.
     Width ve Height özellikleri tanımlanmadığı zaman görsel sayfada gerçek ölçüleri ile görünür. Bu ölçülerden yalnızca birine değer verildiğinde görsel oranları korunarak belirlenen ölçüde görünür. Her iki özelliğe de değer verildiğinde resim oranları yeni verilen ölçülerde olduğu gibi görünür. Bu kullanım resim ölçüleri ile uyumlu olmadığı zaman resimde oransal bozukluklar oluşur.
-  -->
+-->
 
 <!--  border Kullanımı
       Görseli belirtilen kalınlıkta çerçeve içine alır. Daha gelişmiş CSS Border özelliği bunun yerine kullanılabilir.
@@ -256,3 +257,250 @@ Bunun için type özelliğini kullanmamız gerekir.-->
     </strong>
      consectetur adipisicing elit. Ipsam, odit!
 </p>
+
+<h2> HTML Etiketlerine Ekstra Özellik Eklemek </h2>
+
+<a href=""></a>
+
+<!--
+  Bu ek özellikler Türkçe kaynaklarda HTML etiketlerinin nitelikleri, özellikleri veya öznitelikleri diye geçmektedir.
+  Özellikleri:
+  *Tüm HTML elementleri nitelik alabilirler.
+  *Her zaman başlangıç elemanının içine yazılır.
+  *Bu nitelikler, etiketler konusunda ekstra özellik bilgisi sağlar.
+  *Kelimeler arasında tire işareti koyarak(html-etiketi) veya camel case(htmlEtiketi) şeklinde kullanılabilir. HTML'de genellikle - (tire) kullanılır.
+  *class veya id gibi özniteliklerin ismi belirlerken Türkçe karakter tercih edilmemelidir. (ş,ç,ö,ü,ğ,büyük İ ve küçük ı)
+  *Kullanabilmek için özniteliği yazdıktan sonra ="" kullanılıp istediğimiz özelliği tırnakların içine yazılmalıdır..
+  İngilizce bir kaynakta aramak istiyorsanız "HTML attributes" diye aratmak gerekir.
+-->
+
+<img src="" alt="">
+
+<!--
+  HTML dosyasına bir resim eklemek istersek img etiketini kullanırız. img, İngilizcedeki image(resim) kelimesinin kısaltmasıdır. Bu etiketin yanında ise src ve alt özniteliklerini ekleyebiliriz. src (source = kaynak) ekleyeceğimiz resmi nereden alacağını belirttiğimiz yerdir.
+  alt (alernative = alternatif) ise eğer bir nedenden resim görüntülenemez ise resme alternatif olarak ne yazması gerektiğidir.
+-->
+
+<a href=""></a>
+
+<!--
+  Eğer bir bağlantının URL sini vermek istiyorsak <a> (anchor) etiketini kullanırız. href teki iki tırnağın arası URL'yi girdiğimiz yerdir.
+-->
+
+<!--
+  Her etikete id ve class özniteliklerini ekleyebiliriz. Örnek aşağıda.
+-->
+
+<img src="" alt="" id="">
+
+<img src="" alt="" class="" id="">
+
+<a href="" id="" class="" data-id=""></a>
+
+<!--
+  id (identity = kimlik) ;
+  id kullanılan etiketin kimliğini belirtir. Biriciktir*(unique)* yani dökümanın içindeki bir etikete yalnızca bir kez o id ismi verilebilir.
+-->
+
+<a href="https://www.facebook.com" id="facebook-URL"></a>
+
+<!--
+    Buradaki id yi kullanarak direkt olarak bu HTML etiketine ulaşabiliriz.
+
+    Not: id biricik olduğu için istisna olarak id = facebook-URL şeklinde yazarak tırnak işareti kullanmayabiliriz.
+-->
+
+<!--
+  class (sınıf);
+  class, HTML etiketinin hangi sınıfta olduğunu belirmemizi sağlar. Aynı sınıf adını birden fazla HTML etiketine verebiliriz.
+-->
+
+<img src="" class="documents">
+<a href="" class="documents"></a>
+
+<!--
+  Burada görüldüğü gibi iki HTML etiketi de(img ve a) documents sınıfında bulunmaktadır. Daha sonrasında aynı sınıfta bulunan bu iki etikete CSS ile aynı anda değişiklik yapılabilir.
+-->
+
+<h2> HTML İskeletinin Genel Yapısını Anlamak </h2>
+
+<!--
+    ! yazıp taba basınca html yapısı oluşturulur.
+-->
+
+<!DOCTYPE html> <!-- Yapının html olduğunu söylüyor -->
+<html lang="tr"> <!-- bu yapının hangi dil olduğunu söylüyor. yazılacak dokumanla hangi dilse belirtilir tr, fr... -->
+<head> 
+  <meta charset="UTF-8"> <!-- karakter setidir. dil değişince karakter seti değişmelidir. tr için utf8 yeterlidir. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- meta viewport ilk açıldığında web sitesinin nasıl açıldığını söylüyor -->
+  <title>Document</title> <!-- web sayfasının başlık kısmı görünür -->
+</head> <!-- head kısmı açıldığı zaman browserımızın öğrenmek istediği konuları iletiyor -->
+<body>
+  <!-- geriye kalan html etiketleri bu kısımda çalışılır. -->
+</body>
+</html>
+
+<!--
+  HTML sayfalarının en temel bileşenleri nelerdir? Bir HTML iskeleti nasıl oluşturulur ?
+  Web tasarım konusunda araştırma yapan hemen herkesin karşına çıkan temel kavram HTML'dir. Web sayfalarını oluşturma aşamasında kullanılan standart bir metin işaret dili olan HTML açılımı “Hyper Text Markup Language” olarak bilinir. Genel bilinen yanlış kanının aksine HTML bir programlama dili değildir.
+  Daha açık anlatmak gerekirse, Chrome, Firefox, Yandex gibi tarayıcıların okuyup anlamlandırdığı dil HTML dilidir.
+  Bir html sayfası oluşturmadan önce mutlaka HTML 5 standartlarına uygun bir html iskeleti oluşturmalıyız. Web sayfalarımızı HTML 5 standardına uygun hazırlamamız büyük önem taşımaktadır çünkü arama motorları tarafından önemsenmektedir.
+
+  HTML'inizi Yapılandırma
+  HTML yapısında sayfanın genel yapısını tanımlamak ve bazı basit başlık bilgilerini sağlamak için 3 farklı etiket bulunur. Bu üç etiket <html> , <head> ve <body> her web sayfasının temel iskeletini oluşturur.
+  Ayrıca, her şeyi yüklemeden önce sayfa hakkında basit bilgiler (başlığı veya yazarı gibi) sağlarlar. Sayfa yapısı etiketleri, sayfanın görüntülendiğinde nasıl görüneceğini etkilemez; sadece tarayıcılara yardımcı olmak için bulunurlar.
+
+  DOCTYPE Tanıtıcı
+  Bir sayfa yapısı etiketi olmasa da, XHTML 1.0 ve HTML 5 standartları web sayfalarınıza ek bir gereklilik getirir. Her sayfanın ilk satırı, sayfanızın uygun olduğu HTML sürümünü tanımlayan bir DOCTYPE tanımlayıcısı ve bazı durumlarda, spesifikasyonu tanımlayan Belge Türü Tanımını (DTD) içermelidir . Bunu <html> , <head> ve <body> etiketleri takip eder. HTML 5 belge türü, sayfa yapısı etiketlerinden önce görünür.
+
+  <html> Etiketi
+  Her HTML sayfasındaki ilk sayfa yapısı etiketi <html> etiketidir. Bu dosyanın içeriğinin HTML dilinde olduğunu gösterir. <html> etiketi DOCTYPE tanımlamasından hemen sonra kullanılmalıdır. Web sayfanızdaki tüm metin ve HTML öğeleri HTML etiketlerinin başlangıcına ve bitişine yerleştirilmelidir.
+  <html> etiketi sayfasını oluşturan etiketlerin tümünün bir kabı olarak hizmet vermektedir. Bunu dışarıda bırakırsanız, ki bunu yapmamalısınız çünkü bu, sayfanızı geçersiz kılar, tarayıcı sizin için bir <html> etiketi oluşturur, böylece sayfa HTML işlemcisi için anlamlı olur.
+  
+  <head> Etiketi
+  <head> etiketi sayfayla ilgili bilgiler içeren etiketler için bir kapsayıcıdır. Genellikle sayfanın <head> bölümünde yalnızca birkaç etiket kullanılır. Sayfanızın hiçbir metnini başlığa ( <head> etiketleri arasına ) koymamalısınız. Yine <head> etiketinin arasında bulunan lang anahtar kelimesinin amacı sayfa içeriğinin hangi dilde oluştuğudur. Bunu belirtmemizin sebebi arama motorlarında bize bu sayfayı tarayıcımızın diliyle zıt düştüğü durumda çevirme tavsiyesi verip vermemesini sağlamaktır.
+  
+  <head> Etiketi Arasında Bulunan Diğer Anahtar Kelimelerin Görevleri
+  <meta> : Sayfamızı tanımlayan açıklamaların bulunduğu kısımdır. Sayfa açıklaması, sayfa başlığı, kullanılan karakter seti tanımlaması gibi işlemler burada tanımlanıyor.
+  <title>: Tarayıcı penceresinin sekmesindeki başlığı buradan belirtiyoruz.
+  <style>: Sayfada kullanılan stil işlemlerinin tanımlaması yapılır. Örneğin arka plan rengi yazı rengi ya da nesnelerin hizalanması gibi işlemler.
+  
+  <body> Etiketi
+  HTML sayfanızın içeriği <body> etiketi içinde bulunur . Bu, tüm metni ve diğer içeriği (bağlantılar, resimler vb.) içerir.
+-->
+<!--
+  Etiketleri asla çakıştırmamaya dikkat etmelisiniz. Yani, asla aşağıdaki gibi bir şey yapmayın:
+  <! DOCTYPE html> 
+  <html> 
+  <head> 
+  <body> 
+  </head> 
+  </body> 
+  </html>
+  Bir HTML etiketini her kapatışınızda, en son kapatılmamış etiketi kapattığınızdan emin olun.
+-->
+
+<h2>Semantic(Anlamlandırılmış) HTML Etiketleri Kullanımı</h2>
+
+<!--
+  Semantik, anlam veya anlamlandırma anlamı ifadesi taşımaktadır. O halde semantik elementler herhangi bir anlamı olan etiketler ifadesi taşımaktadır. Semantik olarak anlamlandırılmış bir element hem tarayıcıya hem geliştiriciye ne anlama geldiğini açık bir şekilde belirtir. <div> ve <span> gibi elementler semantik olmayan elementlerdir ve mevcut içeriğin hakkında bilgi vermezler. <form>, <table> ve <img> gibi elementler semantik elementlerdir ve içeriği açıkça belirtirler.
+  
+  header Elementi
+  header elementi bir doküman veya bir <section> için bir başlık olduğunu belirtir. İçinde barındırdığı içeriği kapsayıcı olmalıdır. Bir dokümanda birden fazla kullanılabilir.
+  Aşağıdaki örnek, bir <article> için bir başlık içermektedir.
+-->
+
+<header> 
+  <h1>Kodluyoruz Akademi Nedir?</h1>
+</header>
+<p>Her bireyin, özellikle kadınların, yükselen teknoloji sektöründe başarılı olması için eşit haklara sahip olması gerektiğine inanıyoruz.
+Bu yüzden, Kodluyoruz Akademi gençlere dünya çapında kaliteli ve ücretsiz içerik, kaynak ve bootcamp sağlıyor!</p>
+
+<!--
+  nav Elementi
+  nav elementi navigasyon bağlantıları büyük sayfalar için ortaya çıkarılmıştır. Fakat, sayfadaki tüm linkler bu element içinde olmak zorunda değildir.
+-->
+
+<nav> Bootcamp CS50X Kodluyoruz Jr. Şirketler Hakkımızda  </nav>
+
+<!--
+  <section> Elementi
+  Section elementi bir doküman içinde olan sadece bir kısmı belirtir.
+-->
+
+<section>
+  <h1>CS50xKodluyoruz Challenge Başlıyor!</h1>
+  <p>CS50xKodluyoruz ödevlerine devam etmekte zorlanıyor musun? Bitirmek istediğin halde nasıl ilerleyeceğini bilmiyor musun?
+  O zaman CS50xKodluyoruz Challenge tam sana göre! Challenge ekibiyle hedefimiz: 4. haftaya kadar bütün ödevleri tamamlamak olacak!</p>
+  </section>
+  <section>
+  <h1>CS50x Nedir?</h1>
+  <p>CS50x (Computer Science 50), Harvard Üniversitesi Profesörü David J. Malan tarafından verilen efsanevi bilgisayar bilimlerine giriş kursu.
+  Her yıl milyonlarca kişi tarafından alınan bu kursu Türkçe’ye çevirsek ve Türkiye’nin her yerinden gençlere ulaştırsak nasıl olur?
+  Üstelik online ve ücretsiz olarak? Üstelik çalışma gruplarında her yaştan gencin beraber öğrenmesini destekleyerek?</p>
+  </section>
+
+  <!--
+    figure Elementi
+    İçeriğinde resim, gösterim, diyagram, kod listeleri vs. gibi nesnelerin olduğunu belirtir. Ana akış ile ilgili olsa da, konumu ana akıştan tamamen bağımsızdır. Çıkarılırsa dokümanın akışını engellemez.
+  -->
+
+  <p>CS50x Kodluyoruz için hemen kayıt ol, dersleri anında almaya başla. Dersler tamamen online ve ücretsiz! Üstelik CS50x Kodluyoruz herkese göre.
+    İster hiç bilgisayar dersi almamış olun, ister kendinizi ilerletmek isteyin: Bu ders, sağlam bir algoritma temeli isteyen herkes için!</p>
+    
+    <figure>
+      <img width="300" height="300" src="https://cdn.sanity.io/images/9kdepi1d/production/1a22b9fada2411b7369592fd852613637834e866-5520x3680.jpg?auto=format" />
+    </figure>
+
+<!--
+  figcaption Elementi
+  <figcaption> etiketi, <figure> elementinin belirttiği resme başlık koymaya yarar.
+-->
+
+<figcaption>
+	<p>A duck.</p>
+	<p><small>Photograph courtesy of News.</small></p>
+</figcaption>
+
+<!--
+  aside Elementi
+  <aside> elementi içerdiğinden farklı olarak daha başka bazı içerikleri tanımlar. İçeriği, üst içerik hakkında olmalıdır.
+
+  article Elementi
+  <article> elementi bir makale elementidir. Bir makale web sayfasının geri kalanından bağımsız olarak dağıtılabilmelidir.
+
+  Genelde bu elementin kullanabildiği yerler forum mesajları, blog gönderileri, haber metinleri, yorumlar gibi makale içeren metinlerdir.
+
+  footer Elementi
+  <footer> elementi bir doküman ya da kısım için alt bilgilerini belirtir. Bir<footer> genelde dokümanın yazarını, telif haklarını, kullanım gizliği, iletisim vs. gibi bilgileri içerir ve bir dokümanda bir kereden fazla kullanılabilir.
+-->
+
+<h2> Diğer HTML Etiketleri Hakkında </h2>
+
+<!--
+  HTML öğrenirken sıkça sorulan bir soru tüm etiketlerin öğrenilmesi gerekip gerekmediğidir. HTML güncel olarak 100’den fazla etiket içerir ancak bunların hepsini öğrenmek mümkün değildir. Günümüzde birçok HTML sayfası semantik elementler ve 10-12 adet semantik olmayan etiket ile oluşturulabilir.
+
+  h1 - Başlık
+  p - Paragraf
+  i / em - Eğik / Vurgulu Yazı
+  b / strong - Kalın / Koyu Yazı
+  a - Link
+  ul & li  - Sırasız liste ve liste elemanı
+  blockquote - Alıntı
+  hr - Yatay çizgi ekleme
+  img - Görsel
+  div - Bölme 
+  Yukarıda yaygın kullanılan semantik olmayan etiketler ve görevleri verilmiştir. Bunlar dışında bir etikete ihtiyaç duyulduğunda istenen fonksiyona dair yapılacak araştırmayla ilgili etikete ulaşılabilir.
+
+  Emmet
+  HTML ve CSS etiketlerinde kullanım kolaylığı sağlaması açısından Emmet oldukça faydalı bir eklentidir. Kısaltılmış kod yapıları yardımıyla uzun kod blokları oluşturmayı sağlar.
+
+  Asıl koda dönüşmeden önceki Emmet yapısı:
+<!doctype html>
+<html lang ="en">
+<head>
+  <title>Demo</title>
+</head>
+<body>
+  ul#nav>li.item$*4>a{Item $}
+</body>
+</html>
+
+  Emmet sonrası kodun tam formu:
+<!doctype html>
+<html lang ="en">
+<head>
+  <title>Demo</title>
+</head>
+<body>
+  <ul id="nav>
+    <li class="item1"><a href="">Item 1</a></li>
+    <li class="item2"><a href="">Item 2</a></li>
+    <li class="item3"><a href="">Item 3</a></li>
+    <li class="item4"><a href="">Item 4</a></li>
+	</ul>
+</body>
+</html>
+-->
+
