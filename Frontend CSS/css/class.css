@@ -1,0 +1,40 @@
+/* class belirtirken = .text-red {} yazılır. Nokta belirtilir.
+    id belirtirken = #id-bilgisi {} yazılır. # belirtilir. */
+
+.text-red {
+    color: red;
+}
+
+/* color-red yerine text-red dememizin sebebi texte (yazıya) rengini vermemizdir. */
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+#first-article {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3b3939;
+}
+
+/* 
+    Bazı standartlarınız varsa paragraflarda başlıklarda bunu en baştan belirtebiliriz. verilen id de bile kural baştan geçerli olur.
+*/

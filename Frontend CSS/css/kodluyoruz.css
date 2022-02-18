@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1000px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    /*margin: 0 auto 0 auto;  yukarı:0 aşağı:auto sağ:0 sol:auto demek*/
+    margin: 50px auto 0;
+}
+
+.left-bar {
+    width: 200px;
+    float: left;
+}
+
+.card {
+    width: 20%;
+    float: left;
+    padding: 5%;
+    margin-right: 3%;
+    background-color: rgb(202, 192, 192);
+    border-radius: 10px; /*kenarlardan yuvarlak yapı*/
+}
+
+.gradient {
+    background: linear-gradient(
+90deg
+,rgba(45,156,219,.6),rgba(155,81,224,.6));
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 15px 7px rgba(0,0,0,0.03); 
+    box-shadow: 2px 2px 15px 7px rgba(0,0,0,0.03);
+}
+.content {
+    width: 800px;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+.box {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    /* margin: 10px;  yazmak yerine nerelerde boşluk kalacak top bottom left rigt komutlarıyla istediğimiz gibi boşluğu ayarlayabiliriz. */
+    /*margin-top: 10px;
+    margin-bottom: 10px;*/
+    /*margin-left: 10px;*/
+    margin-right: 10px;
+    float: left;
+}
+.bg-red {
+    background-color: red;
+}
+.bg-green {
+    background-color: green;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+/*
+body {
+    background-color:rgb(10, 92, 54);
+    font-family: 'Roboto', sans-serif;
+} /* internetten linksiz eklemek içinde font-family: Times New Roman: sans-serif; ... gibi yazılabilir 
+
+h1 {
+    color: brown;
+    font-size: 64px;
+    text-transform: uppercase; uppercase-büyük harf
+}
+p {
+    color: rgb(182, 50, 171);
+    font-size: 34px;
+}
+
+ul {
+    color: rgb(93, 93, 158);
+    font-size: 30px;
+}
+
+
+/* açıklama satırı: açıklama satırlarını bazen kaybolmamak için yapıları belirtmek için kullanabiliriz; layout, card..gibi */

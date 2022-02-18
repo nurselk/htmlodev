@@ -1,0 +1,45 @@
+img{
+    display: block;
+    margin: 0 auto;
+}
+ 
+ .content{
+     margin: 0 auto;
+     width: 1400px;
+}
+
+ .search {
+     
+    text-align: center;
+    background-color: #EEEEEE;
+}
+ 
+ .box{
+     float: left;
+     margin: 2px 0 0 2px;
+     padding: 6px 0 6px 0;
+     height: 80px;
+     font-size: 14px;
+     text-align: center;
+}
+ 
+ .box-left{
+     margin-left: 0;
+     width: 550px;
+     background-color: #7EE5DA;
+}
+ 
+ .box-center{
+     width: 250px;
+     background-color: #70CCC2;
+}
+ 
+ .box-right{
+     width: 595px;
+     background-color: #62B3AA;
+}
+ 
+ .copyright{
+     margin-top: 100px;
+     text-align: center;
+}
